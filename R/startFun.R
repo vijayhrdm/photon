@@ -6,8 +6,12 @@
 #' @import stringr
 #' @import glue
 #' @export
-startFun <- function(input_path, cran_packages=NULL, bioc_packages=NULL, github_packages=NULL){
-
+startFun <- function(input_path=getwd(), cran_packages=NULL, bioc_packages=NULL, github_packages=NULL){
+if(input_path == "") { 
+  input_path=getwd() 
+  message("Packaging will happen in the current working directory.")} else { message("Packaging will happen in:")
+                                                                           message(input_path)
+                                                                           }
   message("Running Photon")
 
   input_path <- normalizePath(input_path)
