@@ -6,12 +6,8 @@
 #' @import stringr
 #' @import glue
 #' @export
-startFun <- function(input_path=getwd(), cran_packages=NULL, bioc_packages=NULL, github_packages=NULL){
-if(input_path == "") { 
-  input_path=getwd() 
-  message("Packaging will happen in the current working directory.")} else { message("Packaging will happen in:")
-                                                                           message(input_path)
-                                                                           }
+startFun <- function(input_path, cran_packages=NULL, bioc_packages=NULL, github_packages=NULL){
+                                                                          }
   message("Running Photon")
 
   input_path <- normalizePath(input_path)
@@ -122,7 +118,7 @@ if(input_path == "") {
     
     
   } else if(.Platform$OS.type=="unix") {
-    r_portable_path <- normalizePath(file.path(input_path, "R-Portable-Mac"))
+    r_portable_path <- normalizePath(file.path(electron_path, "R-Portable-Mac"))
     
     
     r_electron_version <- system(sprintf("cd %s; ./R CMD BATCH --version", 
