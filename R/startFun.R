@@ -7,7 +7,7 @@
 #' @import glue
 #' @export
 startFun <- function(input_path, cran_packages=NULL, bioc_packages=NULL, github_packages=NULL){
-                                                                          }
+                                                                         
   message("Running Photon")
 
   input_path <- normalizePath(input_path)
