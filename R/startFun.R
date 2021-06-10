@@ -62,7 +62,7 @@ startFun <- function(input_path, cran_packages=NULL, bioc_packages=NULL, github_
   
   if(!dir.exists(electron_path)){
     system2("git", 
-            args=c("clone https://github.com/ColumbusCollaboratory/electron-quick-start", electron_path),
+            args=c("clone https://github.com/vijayhrdm/electron-quick-start", electron_path),
             stdout = TRUE, 
             stderr = TRUE,
             wait=TRUE)
